@@ -1,0 +1,4 @@
+# H6 simulation dependencies
+# Python 3.10+ required
+
+numpy>=1.24

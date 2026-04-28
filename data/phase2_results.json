@@ -1,0 +1,65 @@
+{
+  "simulation": "phase2_collective_thermoregulation",
+  "spec_ref": "SPEC-331",
+  "issue": "#307",
+  "parameters": {
+    "n_nodes": 16,
+    "grid_size": 4,
+    "T_initial_C": 35.0,
+    "T_threshold_C": 38.0,
+    "Q_per_task": 0.8,
+    "Q_dissipation_coeff": 0.08,
+    "sim_steps": 300
+  },
+  "scenarios": [
+    {
+      "scenario": "uniform_load",
+      "routing": "h6",
+      "mean_variance": 0.008,
+      "mean_max_temp": 35.036,
+      "final_variance": 0.0,
+      "final_max_temp": 35.0
+    },
+    {
+      "scenario": "uniform_load",
+      "routing": "central",
+      "mean_variance": 0.008,
+      "mean_max_temp": 35.036,
+      "final_variance": 0.0,
+      "final_max_temp": 35.0
+    },
+    {
+      "scenario": "hotspot_load",
+      "routing": "h6",
+      "mean_variance": 12.4592,
+      "mean_max_temp": 49.7069,
+      "final_variance": 12.6255,
+      "final_max_temp": 50.2083
+    },
+    {
+      "scenario": "hotspot_load",
+      "routing": "central",
+      "mean_variance": 158.8807,
+      "mean_max_temp": 63.8846,
+      "final_variance": 168.75,
+      "final_max_temp": 65.0
+    }
+  ],
+  "acceptance_criteria": {
+    "AC2": {
+      "description": "Thermal variance H6 \u2264 central (uniform load)",
+      "pass": true,
+      "h6_mean_variance": 0.008,
+      "central_mean_variance": 0.008,
+      "improvement_pct": 0.0
+    },
+    "AC3": {
+      "description": "H6 hot-spot max_temp \u2264 central hot-spot max_temp",
+      "pass": true,
+      "h6_mean_max_temp_C": 49.7069,
+      "central_mean_max_temp_C": 63.8846,
+      "delta_C": 14.18
+    }
+  },
+  "falsification_verdict": "HYPOTHESIS SUPPORTED"
+}

@@ -1,0 +1,109 @@
+{
+  "simulation": "phase1_enaqt_analog",
+  "spec_ref": "SPEC-331",
+  "issue": "#307",
+  "parameters": {
+    "coupling_strength": 3.0,
+    "tau_bath_s": 1e-12
+  },
+  "results": [
+    {
+      "T_celsius": 25.0,
+      "T_kelvin": 298.15,
+      "eta_h6": 0.75,
+      "eta_conv": 0.72,
+      "e_landauer_J": 2.8532745152874053e-21,
+      "e_bit_h6_J": 2.133333333333334e-15,
+      "e_bit_conv_J": 2.2222222222222228e-15,
+      "ratio_h6_to_landauer": 747678.96,
+      "h6_beats_conv": true
+    },
+    {
+      "T_celsius": 40.0,
+      "T_kelvin": 313.15,
+      "eta_h6": 0.786287,
+      "eta_conv": 0.683175,
+      "e_landauer_J": 2.9968234595413413e-21,
+      "e_bit_h6_J": 2.034879334710251e-15,
+      "e_bit_conv_J": 2.3420056935078613e-15,
+      "ratio_h6_to_landauer": 679012.08,
+      "h6_beats_conv": true
+    },
+    {
+      "T_celsius": 50.0,
+      "T_kelvin": 323.15,
+      "eta_h6": 0.80884,
+      "eta_conv": 0.659678,
+      "e_landauer_J": 3.092522755710632e-21,
+      "e_bit_h6_J": 1.9781407313997087e-15,
+      "e_bit_conv_J": 2.4254272543176714e-15,
+      "ratio_h6_to_landauer": 639652.76,
+      "h6_beats_conv": true
+    },
+    {
+      "T_celsius": 65.0,
+      "T_kelvin": 338.15,
+      "eta_h6": 0.840158,
+      "eta_conv": 0.625938,
+      "e_landauer_J": 3.236071699964568e-21,
+      "e_bit_h6_J": 1.9044029351659896e-15,
+      "e_bit_conv_J": 2.5561639974605055e-15,
+      "ratio_h6_to_landauer": 588492.19,
+      "h6_beats_conv": true
+    },
+    {
+      "T_celsius": 70.0,
+      "T_kelvin": 343.15,
+      "eta_h6": 0.849923,
+      "eta_conv": 0.615079,
+      "e_landauer_J": 3.2839213480492133e-21,
+      "e_bit_h6_J": 1.8825243142493733e-15,
+      "e_bit_conv_J": 2.6012905732926534e-15,
+      "ratio_h6_to_landauer": 573254.99,
+      "h6_beats_conv": true
+    },
+    {
+      "T_celsius": 75.0,
+      "T_kelvin": 348.15,
+      "eta_h6": 0.859349,
+      "eta_conv": 0.604409,
+      "e_landauer_J": 3.331770996133859e-21,
+      "e_bit_h6_J": 1.8618750987994707e-15,
+      "e_bit_conv_J": 2.6472138146941302e-15,
+      "ratio_h6_to_landauer": 558824.45,
+      "h6_beats_conv": true
+    },
+    {
+      "T_celsius": 80.0,
+      "T_kelvin": 353.15,
+      "eta_h6": 0.868437,
+      "eta_conv": 0.593924,
+      "e_landauer_J": 3.379620644218504e-21,
+      "e_bit_h6_J": 1.8423903760389277e-15,
+      "e_bit_conv_J": 2.6939477860165427e-15,
+      "ratio_h6_to_landauer": 545147.09,
+      "h6_beats_conv": true
+    }
+  ],
+  "acceptance_criteria": {
+    "AC1": {
+      "description": "eta_H6(75C) > eta_H6(25C)",
+      "pass": true,
+      "eta_H6_25C": 0.75,
+      "eta_H6_75C": 0.859349
+    },
+    "AC4": {
+      "description": "E_bit_H6(75C) <= 0.90 * E_bit_conv(75C) (H6 >= 10% more efficient)",
+      "pass": true,
+      "e_bit_h6_aJ": 1861.875,
+      "e_bit_conv_aJ": 2647.214,
+      "efficiency_gain_pct": 29.7
+    },
+    "AC5": {
+      "description": "Stable operation at 70C (eta > 0.01, finite E_bit)",
+      "pass": true,
+      "eta_H6_70C": 0.849923
+    }
+  },
+  "falsification_verdict": "HYPOTHESIS SUPPORTED"
+}

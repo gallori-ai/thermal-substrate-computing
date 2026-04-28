@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+title: "Thermal-Substrate Computing: Simulation Code"
+abstract: >
+  Simulation code and reproducibility data for the paper "Decentralized
+  Thermal-State Load Routing and an ENAQT-Inspired Circuit Design Principle
+  for Energy-Efficient Manycore Architectures". Reproduces the two simulation
+  phases: ENAQT-analog efficiency model (Phase 1) and decentralized thermal
+  routing agent on a 16-node 4x4 grid (Phase 2).
+type: software
+authors:
+  - family-names: "Costa"
+    given-names: "Cleber Barcelos"
+    orcid: "https://orcid.org/0009-0000-5172-9019"
+version: "1.0"
+date-released: "2026-04-28"
+license: MIT
+keywords:
+  - thermal computing
+  - decentralized routing
+  - ENAQT
+  - energy efficiency
+  - manycore architectures
+  - hot-spot mitigation
+  - biologically-inspired computing
+  - thermal-aware routing
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.19857070"
+    description: "Companion paper and archived release on Zenodo"
+preferred-citation:
+  type: generic
+  title: >
+    Decentralized Thermal-State Load Routing and an ENAQT-Inspired Circuit
+    Design Principle for Energy-Efficient Manycore Architectures
+  authors:
+    - family-names: "Costa"
+      given-names: "Cleber Barcelos"
+      orcid: "https://orcid.org/0009-0000-5172-9019"
+  year: 2026
+  publisher:
+    name: "Zenodo"
+  doi: "10.5281/zenodo.19857070"
+  url: "https://doi.org/10.5281/zenodo.19857070"
+  version: "1.0"
