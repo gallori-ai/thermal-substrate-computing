@@ -63,7 +63,7 @@ Requires Python 3.10 or later.
 
 ```bash
 # Clone
-git clone https://github.com/<your-username>/thermal-substrate-computing.git
+git clone https://github.com/gallori-ai/thermal-substrate-computing.git
 cd thermal-substrate-computing
 
 # Install
